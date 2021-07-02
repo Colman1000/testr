@@ -41,12 +41,17 @@ class _SwapperState extends State<Swapper> {
   Widget build(BuildContext context) {
     final _width = MediaQuery.of(context).size.width;
 
-    final _eachRemItemSize = (_width - widget.itemWidth )/ (widget.items - 1);
+    final _eachRemItemSize = (_width - widget.itemWidth) / (widget.items - 1);
 
     return SizedBox(
       child: Stack(
         children: [
-
+          Align(
+            child: Container(
+              color: Colors.red,
+              width: widget.itemWidth,
+            ),
+          )
         ],
       ),
       height: 80,
